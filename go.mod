@@ -1,3 +1,3 @@
 module github.com/danboykis/channel-helpers
 
-go 1.18
+go 1.22

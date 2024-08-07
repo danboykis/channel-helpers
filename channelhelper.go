@@ -2,7 +2,7 @@ package channelhelpers
 
 import "time"
 
-func BatchEvents[T any](values chan T, maxItems int, maxTimeout time.Duration) <-chan []T {
+func BatchEvents[T any](values <-chan T, maxItems int, maxTimeout time.Duration) <-chan []T {
 	batchedChan := make(chan []T)
 
 	dupSlice := func(src []T) []T {
